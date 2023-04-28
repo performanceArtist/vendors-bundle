@@ -14,7 +14,7 @@ module.exports = {
 
   devServer: {
     static: path.join(__dirname,'dist'),
-    port: 3000
+    port: 3002
   },
 
   optimization: {
@@ -36,10 +36,10 @@ module.exports = {
     }),
 
     new ModuleFederationPlugin({
-      name: 'remoteApp_oneVendorsBundle',
+      name: 'remoteApp2_oneVendorsBundle',
       library: {
         type: 'var',
-        name: 'remoteApp_oneVendorsBundle'
+        name: 'remoteApp2_oneVendorsBundle'
       },
       filename: 'remoteEntry.js',
       exposes: {
